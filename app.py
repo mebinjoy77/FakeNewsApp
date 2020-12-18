@@ -11,7 +11,7 @@ def main():
     return(flask.render_template('main.html'))
 @app.route('/predict',methods=['POST'])
 def predict():
-    data = pd.read_csv('train.csv')
+    data = pd.read_csv('train2.csv')
     data1= data[['author','text']].fillna('None')
     cv = CountVectorizer()
     xc = cv.fit_transform(data1['author']+data1['text'])
