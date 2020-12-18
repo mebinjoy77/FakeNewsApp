@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<style>
+		.hed{
+			font-size: 50px;
+			color: blue;
+			border-color: black;
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			padding: 40px;
+			text-align: center;
+			text-decoration-color: seashell;
+			text-decoration: rebeccapurple;
+			text-shadow: royalblue;
+			border-radius: 10px;
+			border-style: ridge;
+	
+			
+		}
+	
+		.res{
+			font-size: 30px;
+			border-color: black;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			padding: 10px;
+			text-align: center;
+			border-radius: 10px;
+			color:black;
+		}
+		.res2{
+			font-size: 20px;
+			border-color: blue;
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			padding: 50px;
+			text-align: center;
+			border-radius: 10px;
+		}
+	</style>
+<head>
+	<title></title>
+    
+</head>
+<body>
+	<header>
+		<div>
+		<div class="hed">
+			Fake News Detection App
+		</div>
+	
+		
+	</div>
+	</header>
+	<p class="res"><b>The news you provided was:</b></p>
+	<div class ="res2">
+		
+	{% if prediction ==0%}
+	<h2 style="color:blue;">Reliable</h2>
+	{% elif prediction == 1%}
+    <h2 style="color:red;">Unreliable</h2>
+	{% endif %}
+	</div>
+</body>
+</html>
